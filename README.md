@@ -1,4 +1,13 @@
-# Projeto de uma interface simples para adiministrar uma API de cinema em Vuejs  
+# Projeto de uma interface simples para adiministrar uma API de cinema
+
+### Tecnologias utilizadas 
+- Vue js 3
+- Node js e npm versão 6.12.1
+- Vue js CLI
+- Vue routing package
+- Visual Code Studio
+- Postman para testes
+- Axios Package
 
 ### Objetivo
 Conectar com a API e inserir, modificar e apagar informações.
