@@ -6,8 +6,9 @@
 - Vue js CLI
 - Vue routing package
 - Visual Code Studio
-- Postman para testes
 - Axios Package
+- JSON Server para testes
+- Postman para testes
 
 ### Objetivo
 Conectar com a API e inserir, modificar e apagar informações.
