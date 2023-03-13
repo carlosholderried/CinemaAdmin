@@ -1,5 +1,4 @@
-# Projeto de uma interface simples para adiministrar uma API de cinema  
-
+# Projeto de uma interface simples para adiministrar uma API de cinema em Vuejs  
 
 ### Objetivo
 Conectar com a API e inserir, modificar e apagar informações.
