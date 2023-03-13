@@ -51,6 +51,7 @@ export default{
             }
     },
     methods:{
+      //função para atualizar o filme
         async UpdateMovie()
         {                                                   
           axios.put(axios.baseURL+"Movies", {
@@ -72,6 +73,7 @@ export default{
         }
     },
     async mounted(){
+      //promise para carregar aa informações de um filme especifico, usando o id
         axiosRequest
         axios.get(axios.baseURL+"Movies/"+this.$route.params.id)
         .then((response) => {

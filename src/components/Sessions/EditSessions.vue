@@ -47,24 +47,21 @@ export default{
       SessionsHeader
     },
     methods:{
+                //função para deletar sessão
                 async Deletesession(id){
                   let result =await axios.delete(axios.baseURL+"Sessions/"+id);
-                  // console.warn(result)
                   if(result.status==200){
                       this.loadData();
                 }},
-
-              loadData(){
+                //função com uma promise para pegar as informações de sessões da API   
+                loadData(){
                 axios.get(axios.baseURL+"Sessions")
                 .then((response) => {
                   this.Sessions=response.data;
-                  // console.log(response)
                 })
                 .catch((error) => {     
                   console.log("test")           
                   console.log(error.response)
-                  // console.log(error.response.data)
-                  // alert(error.response.data);
                 })
               }  
 

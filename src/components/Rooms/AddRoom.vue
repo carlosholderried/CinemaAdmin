@@ -34,6 +34,7 @@ export default{
             }
     },
     methods:{
+                  //função para adicionar na API as informações inseridas pelo usuario
                   async AddRoom(){             
                     axios.post(axios.baseURL+"Rooms", {
                     identification:this.Rooms.identification,

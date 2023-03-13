@@ -48,6 +48,7 @@ export default{
       MoviesHeader
 },
     methods:{
+                //função para deletar filme
                 async deleteMovie(id){
                   let result =await axios.delete(axios.baseURL+"Movies/"+id);
                   console.warn(result)
@@ -55,6 +56,7 @@ export default{
                       this.loadData();
                 }},
 
+                //função com uma promise para pegar as informações dos filmes da API
                 loadData(){
                 axiosRequest
                 axios.get(axios.baseURL+"Movies")

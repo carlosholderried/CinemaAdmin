@@ -40,6 +40,7 @@ export default{
       RoomsHeader
 },
     methods:{
+                //função para deletar sala
                 async Deleteroom(id){
                   let result =await axios.delete(axios.baseURL+"Rooms/"+id);
                   console.warn(result)
@@ -47,7 +48,8 @@ export default{
                       this.loadData();
                 }},     
 
-            loadData(){
+              //função com uma promise para pegar as informações das salas da API
+                loadData(){
                 axiosRequest
                 axios.get(axios.baseURL+"Rooms")
                 .then((response) => {

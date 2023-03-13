@@ -49,6 +49,7 @@ export default{
             }
     },
     methods:{
+                  //função para adicionar na API as informações inseridas pelo usuario
                   async AddMovie(){               
                   axios.post(axios.baseURL+"Movies", {
                   title:this.Movies.title,

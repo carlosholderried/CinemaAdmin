@@ -2,7 +2,7 @@
   <SessionsHeader />
       <form class="add">
         <p>Digite a data da sessão</p>
-    <input type="text" name="date" placeholder="Exemplo: 9/2(dia/mês)" v-model="Sessions.date" />
+    <input type="text" name="date" placeholder="Exemplo: 9/3(dia/mês)" v-model="Sessions.date" />
     <p>Digite o horário da sessão</p>
     <input type="text" name="hour" placeholder="Exemplo: 15:00" v-model="Sessions.hour" />
 
@@ -69,6 +69,7 @@ export default{
             }
     },
     methods:{
+        // função para atualizar a sessão
         async UpdateSession()
         {
           axios.put(axios.baseURL + "Sessions/", {
@@ -90,6 +91,7 @@ export default{
         }
     }, 
       mounted(){
+        //Promise para receber as informações das sessões cadastrados
         axiosRequest
         axios.get(axios.baseURL+"Sessions/"+this.$route.params.id)
         .then((response) => {
@@ -100,6 +102,7 @@ export default{
           console.log(error)
         })
 
+        //Promise para receber as informações dos filmes cadastrados
         axios.get(axios.baseURL + "Movies")
       .then((response) => {
         this.Movies = response.data;
@@ -109,6 +112,7 @@ export default{
         console.log(error)
       })
 
+      //Promise para receber as informações das salas cadastrados
     axios.get(axios.baseURL + "Rooms")
       .then((response) => {
         this.Rooms = response.data;

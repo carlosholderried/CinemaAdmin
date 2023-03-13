@@ -36,6 +36,7 @@ export default{
             }
     },
     methods:{
+        //função para atualizar a sala
         async Updateroom()
         {
           axios.put(axios.baseURL+"Rooms/", {
@@ -53,6 +54,7 @@ export default{
         }
     },
     async mounted(){
+      //promise para carregar aa informações de uma sala especifica, usando o id
       axiosRequest
         axios.get(axios.baseURL+"Rooms/"+this.$route.params.id)
         .then((response) => {
